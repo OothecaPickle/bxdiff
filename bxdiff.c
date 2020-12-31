@@ -34,6 +34,10 @@
 #include <lzma.h>
 #include <openssl/sha.h>
 
+#ifndef u_char
+#define u_char  unsigned char
+#endif
+
 #if __BYTE_ORDER__ == __ORDER_LITTLE_ENDIAN__
 #define bswapLittleToHost32(x) x
 #define bswapBigToHost32(x) __builtin_bswap32(x)
